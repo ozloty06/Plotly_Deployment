@@ -2,55 +2,79 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bellybutton Biodiversity</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bellybutton Biodiversity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
 </head>
 
 <body>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-          <h5>Test Subject ID No.:</h5>
-          <!-- <select id="selDataset"></select> -->
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
-        </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
-          </div>
-          <div id="sample-metadata" class="panel-body"></div>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <div id="bar"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="bubble"></div>
-      </div>
-    </div>
-  </div>
+    <div class="container-fluid">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  
-  <script src="charts.js"></script>
+        <div class="row container-fluid">
+            <div class="col-md-12 jumbotron text-left">
+                <h1>Belly Button Biodiversity</h1>
+                <p>Use the interactive charts below to explore the dataset</p>
+            </div>
+        </div>
 
+        <div class="row container-fluid">
+            
+            <div class="col-md-3">
+            <div>
+                <h4>Select a Test Subject ID No.:</h4>
+                <!-- <select id="selDataset"></select> -->
+                <div class="well">
+                <button class="btn btn-secondary btn-lg">
+                    <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                </button>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-md-9">
+            <h3>Our microbiology laboratory has been investigating bacteria species that can synthesize proteins that taste like beef on behalf of Improbable Beef®.</h3>
+            <br>
+            <h3>It may be possible that the perfect species is close by- possibly even in our own belly button. This dashboard can help us visualize the results of our belly button biodiversity study. Select a participant subject ID on the left to refresh the charts with an interactive view into their belly button micro biome.</h3>
+            </div>
+        </div>
+
+        <div class="row feature col container-fluid">
+            <div class="col-md-3">
+                
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Demographic Info</h3>
+                    </div>
+                    <div id="sample-metadata" class="panel-body"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="bar"></div>
+            </div>
+            <div class="col-md-5">
+                <div id="gauge"></div>
+            </div>
+        </div>
+
+        <div class="row feature col container-fluid">
+            <div class="col-md-12">
+                <div id="bubble"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script src="charts.js"></script>
+
+
+    <h7> Image: "DNA lab" by umseas is licensed under CC BY 2.0 </h7>
 </body>
 
 </html>
